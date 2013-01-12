@@ -1,0 +1,24 @@
+
+* Requeriments
+
+  - python-imaging (apt-get install python-imaging)
+  - Apache + Mysql + PhP
+
+
+* Instructions
+
+1. Copy all files to some HTTP server public directory
+    cp -rf ongot /var/www/
+
+2. Create a new table in the database
+    > CREATE database got_online;
+
+3. Create a username with a password
+    > GRANT all privileges on got_online.* to got_online@localhost identified by 'NedStark';
+
+4. Insert data into sql tables
+   mysql -u got_online --password=NedStark got_online < ongot/sql/insertAll.sql
+
+5. Configure the var $PythonDir of file config.inc.php (this directory /pytronos)
+
+And put your browser into web directory /Map.php

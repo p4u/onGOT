@@ -1,0 +1,97 @@
+DROP TABLE IF EXISTS regions;
+
+CREATE TABLE regions(
+	id integer NOT NULL auto_increment,
+	name char(40) default "none", 
+	house char(20) default "nobody",
+	horse integer default 0, 
+	soldier integer default 0, 
+	boat integer default 0, 
+	fort integer default 0, 
+	siege integer default 0, 
+	dragon integer default 0,
+	power bool default 0,  
+	ord char(20) default "none",
+	KEY id (id)) 
+AUTO_INCREMENT=1;
+
+INSERT INTO regions(name) values('Barrowlands');
+INSERT INTO regions(name) values('BayOfIce');
+INSERT INTO regions(name) values('Bitterbridge');
+INSERT INTO regions(name) values('Blackwater');
+INSERT INTO regions(name) values('BlackwaterBay');
+INSERT INTO regions(name) values('BlazewaterBay');
+INSERT INTO regions(name) values('BloodyGate');
+INSERT INTO regions(name) values('CapeWrath');
+INSERT INTO regions(name) values('CasterlyRock');
+INSERT INTO regions(name) values('Castleblack');
+INSERT INTO regions(name) values('CiderHall');
+INSERT INTO regions(name) values('CrackclawPoint');
+INSERT INTO regions(name) values('Deepwood');
+INSERT INTO regions(name) values('DeepwoodPort');
+INSERT INTO regions(name) values('DornishMarches');
+INSERT INTO regions(name) values('Dragonstone');
+INSERT INTO regions(name) values('DragonstonePort');
+INSERT INTO regions(name) values('Duskendale');
+INSERT INTO regions(name) values('EastSummerSea');
+INSERT INTO regions(name) values('FlintsFinger');
+INSERT INTO regions(name) values('GoldenTooth');
+INSERT INTO regions(name) values('Goldroad');
+INSERT INTO regions(name) values('GreywaterWatch');
+INSERT INTO regions(name) values('Gulltown');
+INSERT INTO regions(name) values('GulltownPort');
+INSERT INTO regions(name) values('Harrenhal');
+INSERT INTO regions(name) values('Highgarden');
+INSERT INTO regions(name) values('IronmansBay');
+INSERT INTO regions(name) values('Karhold');
+INSERT INTO regions(name) values('KingsLanding');
+INSERT INTO regions(name) values('KingsLandingPort');
+INSERT INTO regions(name) values('Kingsroad');
+INSERT INTO regions(name) values('Kingswood');
+INSERT INTO regions(name) values('Lannisport');
+INSERT INTO regions(name) values('LannisportPort');
+INSERT INTO regions(name) values('Maidenpool');
+INSERT INTO regions(name) values('MoatCailin');
+INSERT INTO regions(name) values('Oldtown');
+INSERT INTO regions(name) values('OldtownPort');
+INSERT INTO regions(name) values('PrincesPass');
+INSERT INTO regions(name) values('Pyke');
+INSERT INTO regions(name) values('PykePort');
+INSERT INTO regions(name) values('RedwyneStraights');
+INSERT INTO regions(name) values('Riverrun');
+INSERT INTO regions(name) values('Roseroad');
+INSERT INTO regions(name) values('SaltShore');
+INSERT INTO regions(name) values('SeaOfDorne');
+INSERT INTO regions(name) values('Seagard');
+INSERT INTO regions(name) values('SeagardPort');
+INSERT INTO regions(name) values('SearoadMarches');
+INSERT INTO regions(name) values('ShipbrfakerBay');
+INSERT INTO regions(name) values('Starfall');
+INSERT INTO regions(name) values('StoneySept');
+INSERT INTO regions(name) values('StormsEnd');
+INSERT INTO regions(name) values('SunsetSea');
+INSERT INTO regions(name) values('Sunspear');
+INSERT INTO regions(name) values('SunspearPort');
+INSERT INTO regions(name) values('Tarth');
+INSERT INTO regions(name) values('TheArbor');
+INSERT INTO regions(name) values('TheBite');
+INSERT INTO regions(name) values('TheBoneway');
+INSERT INTO regions(name) values('TheDreadfort');
+INSERT INTO regions(name) values('TheEyrie');
+INSERT INTO regions(name) values('TheFingers');
+INSERT INTO regions(name) values('TheGoldenSound');
+INSERT INTO regions(name) values('TheMountainsOfTheMoon');
+INSERT INTO regions(name) values('TheNarrowSea');
+INSERT INTO regions(name) values('TheShimeringSea');
+INSERT INTO regions(name) values('TheStoneyShore');
+INSERT INTO regions(name) values('TheTrident');
+INSERT INTO regions(name) values('TheTwins');
+INSERT INTO regions(name) values('TheVale');
+INSERT INTO regions(name) values('ThreeTowers');
+INSERT INTO regions(name) values('Tumblestone');
+INSERT INTO regions(name) values('WestSummerSea');
+INSERT INTO regions(name) values('WidowsWatch');
+INSERT INTO regions(name) values('Winterfell');
+INSERT INTO regions(name) values('WhiteHarbor');
+INSERT INTO regions(name) values('WhiteHarborPort');
+INSERT INTO regions(name) values('Yronwood');
