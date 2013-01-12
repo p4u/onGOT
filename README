@@ -1,8 +1,0 @@
-Game of Thrones Online is a HTTP game based on the Game of Thrones board game.
-It is not a complete game, it is just a useful tool which can be used to
-play a online multiplayer version of the game.
-
-It is for 9 players and the duration of the game might be of more than one month.
-There must be a coordinator (one of the players) who is in charge of modify the
-board map using this tool. The players send his movements and instructions to the
-coordinator using irc, email, forum or any kind of message system.
