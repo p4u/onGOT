@@ -1,0 +1,15 @@
+troop Stark KingsLanding Direwolf 2
+troop Greyjoy BayOfIce Barcoluengo 2
+troop Tyrell Seagard Archer 2
+troop Targaryen Dragonstone Dragon 1
+troop Baratheon StormsEnd Bastion 1
+troop Lannister Lannisport Mercenary 2
+troop Martell Sunspear Sperman 1
+troop Arryn Harrenhal Clanman 1
+troop Tyrell PrincesPass Soldier 1
+troop Stark Yronwood Boat 1
+troop Arryn Oldtown Fort 1
+troop Targaryen Highgarden Siege 1
+troop Lannister CiderHall Horse 1
+write /tmp/map.png
+exit

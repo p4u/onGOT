@@ -14,7 +14,8 @@ $DBlink = mysql_connect($DBhost,$DBuser,$DBpass)
 mysql_select_db($DBname,$DBlink)
 	or die('Could not select database' .  mysql_error());
 
-$query = "SELECT house,horse,soldier,boat,fort,siege,power,ord,dragon from regions where name='$Region'";
+$query = "SELECT house,horse,soldier,boat,fort,siege,power,ord,dragon,direwolf,
+clanman,archer,mercenary,barcoluengo,bastion,sperman from regions where name='$Region'";
 
 $result = mysql_query($query,$DBlink) 
 	or die('Cannot select: ' . mysql_error());
@@ -47,9 +48,29 @@ echo "<td><input type='text' value='$row[5]' name='siege' size='3' maxlength='2'
 echo "<tr><td><b>Dragon:</b></td>\n";
 echo "<td><input type='text' value='$row[8]' name='dragon' size='3' maxlength='2'></td></tr>\n";
 
+echo "<tr><td><b>Direwolf:</b></td>\n";
+echo "<td><input type='text' value='$row[9]' name='direwolf' size='3' maxlength='2'></td></tr>\n";
 
+echo "<tr><td><b>Clanman:</b></td>\n";
+echo "<td><input type='text' value='$row[10]' name='clanman' size='3' maxlength='2'></td></tr>\n";
+
+echo "<tr><td><b>Archer:</b></td>\n";
+echo "<td><input type='text' value='$row[11]' name='archer' size='3' maxlength='2'></td></tr>\n";
+
+echo "<tr><td><b>Mercenary:</b></td>\n";
+echo "<td><input type='text' value='$row[12]' name='mercenary' size='3' maxlength='2'></td></tr>\n";
+
+echo "<tr><td><b>Barcoluengo:</b></td>\n";
+echo "<td><input type='text' value='$row[13]' name='barcoluengo' size='3' maxlength='2'></td></tr>\n";
+
+echo "<tr><td><b>Bastion:</b></td>\n";
+echo "<td><input type='text' value='$row[14]' name='bastion' size='3' maxlength='2'></td></tr>\n";
+
+echo "<tr><td><b>Sperman:</b></td>\n";
+echo "<td><input type='text' value='$row[15]' name='sperman' size='3' maxlength='2'></td></tr>\n";
 
 echo "</tbody></table>\n";
+
 
 drawPower($row[6]);
 

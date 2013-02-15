@@ -3,7 +3,9 @@
 require("config.inc.php");
 
 $opts = array("house","horse","soldier",
-	"boat","fort","siege","power","ord","dragon");
+	"boat","fort","siege","power","ord","dragon",
+	"direwolf","clanman","archer","mercenary","barcoluengo",
+	"bastion","sperman");
 
 $region = $_GET[q];
 

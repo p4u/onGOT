@@ -10,6 +10,13 @@ CREATE TABLE regions(
 	fort integer default 0, 
 	siege integer default 0, 
 	dragon integer default 0,
+	direwolf integer default 0,
+	clanman integer default 0,
+	mercenary integer default 0,
+	archer integer default 0,
+	barcoluengo integer default 0,
+	bastion integer default 0,
+	sperman integer default 0,
 	power bool default 0,  
 	ord char(20) default "none",
 	KEY id (id)) 

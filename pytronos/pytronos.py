@@ -306,7 +306,10 @@ class DrawMap:
 
 
 types = {"Soldier":1, "Horse":2, "Fort":3,\
-		"Siege":4, "Dragon":5, "Boat":6}
+		"Siege":4, "Dragon":5, "Boat":6, \
+		"Archer":7, "Direwolf":8, "Sperman":9,
+		"Mercenary":10, "Bastion":11, "Barcoluengo":12,
+		"Clanman":13}
 dm = DrawMap()
 
 opt = raw_input().strip().split()
