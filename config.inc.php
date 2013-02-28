@@ -1,17 +1,17 @@
 <?
 $DBhost = "127.0.0.1";
-$DBuser = "got_online";
-$DBpass = "NedStark";
-$DBname = "got_online";
+$DBuser = "Martin";
+$DBpass = "WinterIsComming";
+$DBname = "ongot";
 
 // Original map path
-$Map = "map/MapaBase.jpeg";
+$Map = "MapaBase.jpeg";
 
 // Current map path
-$GenMap = "map/GameOfThrones.jpeg";
+$GenMap = "../GameOfThrones.jpeg";
 
 // Output map path relative to python script
-$GenMapPy = "../map/GameOfThrones.jpeg";
+$GenMapPy = "../../GameOfThrones.jpeg";
 
 // File with the sql inserts
 $SQLinsertFile = "sql/insertAll.sql";
@@ -29,7 +29,14 @@ $Houses = array('Stark',
 		'Tyrell',
 		'Arryn');
 
-$PythonDir = "/var/www/ongot/pytronos";
+$Troops = array("Horse","Soldier",
+       "Boat","Fort","Siege","Dragon",
+       "Direwolf","Clanman","Archer","Mercenary",
+       "Barcoluengo","Bastion","Sperman");
+
+$Figures = array("house","power","ord");
+
+$PythonDir = "pytronos";
 $PythonExec = "./pytronos.py";
 
 $BarrelsLimit = array(0,8);

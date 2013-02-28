@@ -2,10 +2,7 @@
 <?php
 require("config.inc.php");
 
-$opts = array("house","horse","soldier",
-	"boat","fort","siege","power","ord","dragon",
-	"direwolf","clanman","archer","mercenary","barcoluengo",
-	"bastion","sperman");
+$opts = array_merge($Figures,$Troops);
 
 $region = $_GET[q];
 

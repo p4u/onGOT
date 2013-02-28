@@ -187,6 +187,7 @@ function regions()
 
 	foreach( $regions as &$R )
 		{
+		global $Troops;
 		$actReg = $R[0];
 		
 		$house = query("SELECT house FROM regions where name='$actReg'");
@@ -199,8 +200,12 @@ function regions()
 			//INSERTING TROOPS
 			//----------------
 			$tC = 0;
-			$troopsArray = array('Soldier','Horse','Boat','Fort','Siege','Dragon');
-			$troops = query("SELECT soldier,horse,boat,fort,siege,dragon FROM regions where name='$actReg'");
+			$troopsArray = $Troops;
+			$troopsQuery = $troopsArray[0];
+			
+			$first = 1;
+			foreach ( $troopsArray as &$T ) { if ( ! $first) $troopsQuery = "$troopsQuery,$T"; else $first = 0;  }
+			$troops = query("SELECT $troopsQuery FROM regions where name='$actReg'");
 			
 			foreach( $troops[0] as &$T )
 				{
