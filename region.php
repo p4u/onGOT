@@ -14,8 +14,13 @@ $DBlink = mysql_connect($DBhost,$DBuser,$DBpass)
 mysql_select_db($DBname,$DBlink)
 	or die('Could not select database' .  mysql_error());
 
-$query = "SELECT house,horse,soldier,boat,fort,siege,power,ord,dragon,direwolf,
-clanman,archer,mercenary,barcoluengo,bastion,sperman from regions where name='$Region'";
+$options = array_merge($Troops,$Figures);
+$optionsQuery = $options[0];
+			
+$first = 1;
+foreach ( $options as &$T ) { if ( ! $first) $optionsQuery = "$optionsQuery,$T"; else $first = 0;  }
+
+$query = "SELECT $optionsQuery from regions where name='$Region'";
 
 $result = mysql_query($query,$DBlink) 
 	or die('Cannot select: ' . mysql_error());
@@ -26,59 +31,23 @@ mysql_free_result($result);
 
 echo "<form action='regupdate.php?q=$Region' method='post'>\n";
 
-drawHouse($row[0]);
-
 echo "<table><tbody>\n";
 
-echo "<tr><td><b>Horse:</b></td>\n";
-echo "<td><input type='text' value='$row[1]' name='horse' size='3' maxlength='2'></td></tr>\n";
-
-echo "<tr><td><b>Soldier:</b></td>\n";
-echo "<td><input type='text' value='$row[2]' name='soldier' size='3' maxlength='2'></td></tr>\n";
-
-echo "<tr><td><b>Boat:</b></td>\n";
-echo "<td><input type='text' value='$row[3]' name='boat' size='3' maxlength='2'></td></tr>\n";
-
-echo "<tr><td><b>Fort:</b></td>\n";
-echo "<td><input type='text' value='$row[4]' name='fort' size='3' maxlength='2'></td></tr>\n";
-
-echo "<tr><td><b>Siege:</b></td>\n";
-echo "<td><input type='text' value='$row[5]' name='siege' size='3' maxlength='2'></td></tr>\n";
-
-echo "<tr><td><b>Dragon:</b></td>\n";
-echo "<td><input type='text' value='$row[8]' name='dragon' size='3' maxlength='2'></td></tr>\n";
-
-echo "<tr><td><b>Direwolf:</b></td>\n";
-echo "<td><input type='text' value='$row[9]' name='direwolf' size='3' maxlength='2'></td></tr>\n";
-
-echo "<tr><td><b>Clanman:</b></td>\n";
-echo "<td><input type='text' value='$row[10]' name='clanman' size='3' maxlength='2'></td></tr>\n";
-
-echo "<tr><td><b>Archer:</b></td>\n";
-echo "<td><input type='text' value='$row[11]' name='archer' size='3' maxlength='2'></td></tr>\n";
-
-echo "<tr><td><b>Mercenary:</b></td>\n";
-echo "<td><input type='text' value='$row[12]' name='mercenary' size='3' maxlength='2'></td></tr>\n";
-
-echo "<tr><td><b>Barcoluengo:</b></td>\n";
-echo "<td><input type='text' value='$row[13]' name='barcoluengo' size='3' maxlength='2'></td></tr>\n";
-
-echo "<tr><td><b>Bastion:</b></td>\n";
-echo "<td><input type='text' value='$row[14]' name='bastion' size='3' maxlength='2'></td></tr>\n";
-
-echo "<tr><td><b>Sperman:</b></td>\n";
-echo "<td><input type='text' value='$row[15]' name='sperman' size='3' maxlength='2'></td></tr>\n";
-
+$i = 0;
+foreach ( $Troops as &$T) {
+	echo "<tr><td><b>$T:</b></td>\n";
+	echo "<td><input type='text' value='$row[$i]' name='$T' size='3' maxlength='2'></td></tr>\n";
+	$i++;
+	}
 echo "</tbody></table>\n";
 
-
-drawPower($row[6]);
-
-drawOrder($row[7]);
+drawHouse($row[$i]);
+$i++;
+drawPower($row[$i]);
+$i++;
+drawOrder($row[$i]);
 
 echo "<p><input type=\"submit\" value=\"Update\"></form></p>\n";
-
-
 
 
 function drawHouse($house)

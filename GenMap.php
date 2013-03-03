@@ -180,6 +180,7 @@ function query($Q)
 function regions()
 	{
 	global $pipes;
+	global $Troops;
 
 	echo "<h5>Inserting Region icons...</h5>\n";
 	
@@ -187,7 +188,6 @@ function regions()
 
 	foreach( $regions as &$R )
 		{
-		global $Troops;
 		$actReg = $R[0];
 		
 		$house = query("SELECT house FROM regions where name='$actReg'");

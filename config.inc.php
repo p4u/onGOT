@@ -1,8 +1,8 @@
 <?
 $DBhost = "127.0.0.1";
-$DBuser = "Martin";
-$DBpass = "WinterIsComming";
-$DBname = "ongot";
+$DBuser = "got_online";
+$DBpass = "NedStark";
+$DBname = "got_online_expansion";
 
 // Original map path
 $Map = "MapaBase.jpeg";
@@ -29,10 +29,10 @@ $Houses = array('Stark',
 		'Tyrell',
 		'Arryn');
 
-$Troops = array("Horse","Soldier",
-       "Boat","Fort","Siege","Dragon",
-       "Direwolf","Clanman","Archer","Mercenary",
-       "Barcoluengo","Bastion","Sperman");
+$Troops = array("horse","soldier",
+       "boat","fort","siege","dragon",
+       "direwolf","clanman","archer","mercenary",
+       "barcoluengo","bastion","sperman");
 
 $Figures = array("house","power","ord");
 
